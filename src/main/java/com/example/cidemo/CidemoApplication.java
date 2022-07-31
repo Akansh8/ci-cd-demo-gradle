@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class CidemoApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(CidemoApplication.class, args);
 	}
@@ -17,6 +16,4 @@ public class CidemoApplication {
 	public String getWelcomeMessage(){
 		return "First CI/CD demo with second build";
 	}
-
-
 }
