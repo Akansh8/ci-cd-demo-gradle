@@ -39,14 +39,14 @@ workflows:
 #            - test
             - package
 #
-#      - hold:
-#          type: approval
-#          requires:
-#            - qa
+      - hold:
+          type: approval
+          requires:
+            - qa
 #
       - production:
           requires:
-            - qa
+            - hold
 
 
 
