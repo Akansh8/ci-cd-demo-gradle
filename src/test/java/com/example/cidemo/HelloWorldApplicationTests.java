@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class CidemoApplicationTests {
+public class HelloWorldApplicationTests {
 
 	@Autowired
 	private MockMvc mvc;
@@ -28,6 +28,6 @@ public class CidemoApplicationTests {
 	public void getHello() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
-				.andExpect(content().string(equalTo("First CI/CD demo with second build")));
+				.andExpect(content().string(equalTo("Hello World")));
 	}
 }
